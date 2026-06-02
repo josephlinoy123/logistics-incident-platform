@@ -9,6 +9,8 @@
 ### 1. Mobile Incident Reporter (Canvas App)
 *Warehouse staff submit details and photos right from the warehouse floor.* ![Mobile App Dashboard](screenshots/01-mobile-app.png)
 
+**1.1 Incident Dashboard:** *A real-time gallery view of all submitted reports and their status.* ![Incident Dashboard](screenshots/1.1-dashboard.png)
+
 ### 2. AI & Routing Engine (Power Automate)
 *The backend flow processes the data and grades the severity without any human intervention.* ![Power Automate Flow](screenshots/02-power-automate-flow.png)
 
