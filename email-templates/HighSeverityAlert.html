@@ -1,0 +1,75 @@
+
+  <title>Logistics Incident Alert</title>
+
+
+  <table cellpadding="0" cellspacing="0" style="background-color:#f4f6f9; padding: 24px 0;">
+    <tbody><tr>
+      <td>
+        <table cellpadding="0" cellspacing="0" style="max-width:600px; width:100%;">
+          <tbody><tr>
+            <td style="background-color: #c0392b; padding: 32px 40px; border-radius: 12px 12px 0 0;">
+              <table cellpadding="0" cellspacing="0">
+                <tbody><tr>
+                  <td>
+                    <span style="font-size:32px;">🚨</span>
+                    <h1 style="color:#ffffff; margin: 8px 0 0 0; font-size:22px; font-weight:700;">HIGH SEVERITY INCIDENT ALERT</h1>
+                    <p style="color:rgba(255,255,255,0.9); margin:6px 0 0 0; font-size:14px;">Automated Logistics Incident Management System</p>
+                  </td>
+                </tr>
+              </tbody></table>
+            </td>
+          </tr>
+          <tr>
+            <td style="background:#fff3cd; border-left:4px solid #ffc107; padding:14px 40px;">
+              <p style="margin:0; color:#856404; font-size:13px; font-weight:600;">⚠️ This incident has been automatically classified as HIGH SEVERITY by AI analysis and requires manager review.</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="background:#ffffff; padding: 32px 40px;">
+              <table cellpadding="0" cellspacing="0" style="margin-bottom:24px;">
+                <tbody><tr>
+                  <td style="padding:8px 12px 8px 0;">
+                    <div style="background:#f8f9fc; border-radius:8px; padding:14px;">
+                      <p style="margin:0 0 4px 0; font-size:11px; color:#8892a4; font-weight:600;">TRACKING NUMBER</p>
+                      <p style="margin:0; font-size:15px; color:#1a2035; font-weight:700;">@{triggerOutputs()?['body/cr4ea_trackingnumber']}</p>
+                    </div>
+                  </td>
+                  <td style="padding:8px 0 8px 12px;">
+                    <div style="background:#fff5f5; border:1px solid #fecaca; border-radius:8px; padding:14px;">
+                      <p style="margin:0 0 4px 0; font-size:11px; color:#8892a4; font-weight:600;">SEVERITY LEVEL</p>
+                      <p style="margin:0; font-size:15px; color:#dc2626; font-weight:700;">🔴 HIGH — AI Classified</p>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding:8px 12px 8px 0;">
+                    <div style="background:#f8f9fc; border-radius:8px; padding:14px;">
+                      <p style="margin:0 0 4px 0; font-size:11px; color:#8892a4; font-weight:600;">INCIDENT TITLE</p>
+                      <p style="margin:0; font-size:14px; color:#1a2035; font-weight:600;">@{triggerOutputs()?['body/cr4ea_incidenttitle']}</p>
+                    </div>
+                  </td>
+                  <td style="padding:8px 0 8px 12px;">
+                    <div style="background:#f8f9fc; border-radius:8px; padding:14px;">
+                      <p style="margin:0 0 4px 0; font-size:11px; color:#8892a4; font-weight:600;">REPORTED BY</p>
+                      <p style="margin:0; font-size:14px; color:#1a2035; font-weight:600;">@{triggerOutputs()?['body/cr4ea_submitteremail']}</p>
+                    </div>
+                  </td>
+                </tr>
+              </tbody></table>
+              
+              <h3 style="color:#1a2035; font-size:15px; margin:24px 0 12px 0;">📝 Incident Description</h3>
+              <div style="background:#f8f9fc; border-left:4px solid #3b82f6; border-radius:0 8px 8px 0; padding:16px 20px; margin-bottom:24px;">
+                <p style="margin:0; font-size:14px; color:#374151;">@{triggerOutputs()?['body/cr4ea_packagedescription']}</p>
+              </div>
+              
+              <h3 style="color:#1a2035; font-size:15px; margin:24px 0 12px 0;">🤖 AI Analysis Result</h3>
+              <div style="background:#f0fdf4; border:1px solid #86efac; border-radius:8px; padding:16px 20px; margin-bottom:28px;">
+                <p style="margin:0; font-size:13px; color:#166534;">Sentiment: @{outputs('AI_Builder_-_Analyze_Incident_Sentiment')?['body/responsev2/predictionOutput/result/sentiment']} | Positive: @{outputs('AI_Builder_-_Analyze_Incident_Sentiment')?['body/responsev2/predictionOutput/result/documentScores/positive']} | Negative: @{outputs('AI_Builder_-_Analyze_Incident_Sentiment')?['body/responsev2/predictionOutput/result/documentScores/negative']}</p>
+              </div>
+            </td>
+          </tr>
+        </tbody></table>
+      </td>
+    </tr>
+  </tbody></table>
+
