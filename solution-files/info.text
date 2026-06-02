@@ -1,0 +1,9 @@
+Download the Unmanaged Solution .zip file from the solution-files/ directory in this repository.
+
+Navigate to make.powerapps.com.
+
+Go to Solutions > Import solution and upload the .zip file.
+
+Publish all customizations.
+
+Re-authenticate the Dataverse, AI Builder, and Outlook connection references when prompted
